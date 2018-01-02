@@ -54,19 +54,19 @@ img {
 
 .main-nav a {
   font-size: .95em;
-  color: #3acec2;
+  color: #093a58;
   text-transform: uppercase;
 }
 
 .main-nav a:hover {
-  color: #093a58;
+  color: #2575a8;
 }
 
 /* ---- Layout Containers ---- */
 
 .banner {
   color: #fff;
-  background: #3acec2;
+  background: #A5ACAF;
 }
 
 .main-footer {
@@ -81,13 +81,38 @@ img {
   width: 500px;
 }
 
+.headline,
+.tagline {
+  color: #0c0c0c;
+}
+
 /* ============================
   Media Queries
 =============================== */
 
-@media (min-width: 769px) {
+@media (min-width: 780px) {
 
-  /* ---- Float clearfix ---- */
+  /* ---- Float clearfix @ 780px---- */
+
+  .main-nav {
+    float: right;
+    margin-right: 25px;
+  }
+
+  .main-nav li {
+    float: left;
+    margin-left: 15px;
+    margin-top: 15px;
+  }
+
+  .main-nav a {
+    padding: 10px 10px;
+  }
+
+  .name {
+    float: left;
+    margin-left: 15px;
+  }
 
   .clearfix::after {
     content: "";
@@ -95,16 +120,80 @@ img {
     clear: both;
   }
 
+  .logo {
+    display: block;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+
+  .headline {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  .tagline {
+    display: block;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  .main-footer {
+    text-align: center;
+  }
+
 }
 
-@media (min-width: 444px) {
+@media (min-width: 560px) {
 
-  /* ---- Float clearfix ---- */
+  /* ---- Float clearfix @ 560px---- */
+
+  .main-nav {
+    float: right;
+    margin-right: 25px;
+  }
+
+  .main-nav li {
+    float: left;
+    margin-left: 15px;
+    margin-top: 15px;
+  }
+
+  .main-nav a {
+    padding: 10px 10px;
+  }
+
+  .name {
+    float: left;
+    margin-left: 15px;
+  }
 
   .clearfix::after {
     content: "";
     display: table;
     clear: both;
+  }
+
+  .logo {
+    display: block;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+
+  .headline {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  .tagline {
+    display: block;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  .main-footer {
+    text-align: center;
   }
 
 }
