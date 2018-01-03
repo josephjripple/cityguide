@@ -164,36 +164,14 @@ img {
     padding-left: 1em;
   }
 
+/*--Center main content section --*/
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
   .main-footer {
     text-align: center;
-  }
-
-}
-
-@media (min-width: 400px) {
-
-  /* ---- Float clearfix @ 400px---- */
-
-  .logo {
-    display: block;
-    margin: 0 auto;
-    padding-top: 20px;
-  }
-
-  .headline {
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 10px;
-  }
-
-  .tagline {
-    display: block;
-    text-align: center;
-    padding-bottom: 10px;
-  }
-
-  .feat-img {
-
   }
 
 }
