@@ -67,6 +67,10 @@ img {
 .banner {
   color: #fff;
   background: #A5ACAF;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
 }
 
 .main-footer {
@@ -78,12 +82,19 @@ img {
 /* ---- Page Elements ---- */
 
 .logo {
-  width: 500px;
+  width: auto;
+  height: auto;
 }
 
 .headline,
 .tagline {
   color: #0c0c0c;
+}
+
+.feat-img {
+  width: auto;
+  height: auto;
+
 }
 
 /* ============================
@@ -138,41 +149,24 @@ img {
     padding-bottom: 10px;
   }
 
+  .col {
+    display: inline-block;
+    width: 33%;
+    vertical-align: top;
+    margin-right: -5px;
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+
   .main-footer {
     text-align: center;
   }
 
 }
 
-@media (min-width: 560px) {
+@media (min-width: 400px) {
 
-  /* ---- Float clearfix @ 560px---- */
-
-  .main-nav {
-    float: right;
-    margin-right: 25px;
-  }
-
-  .main-nav li {
-    float: left;
-    margin-left: 15px;
-    margin-top: 15px;
-  }
-
-  .main-nav a {
-    padding: 10px 10px;
-  }
-
-  .name {
-    float: left;
-    margin-left: 15px;
-  }
-
-  .clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+  /* ---- Float clearfix @ 400px---- */
 
   .logo {
     display: block;
@@ -192,8 +186,8 @@ img {
     padding-bottom: 10px;
   }
 
-  .main-footer {
-    text-align: center;
+  .feat-img {
+    
   }
 
 }
