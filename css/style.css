@@ -16,6 +16,7 @@ body {
 p {
   font-size: .95em;
   margin-bottom: 1.8em;
+  padding-left: 5px;
 }
 
 h2,
@@ -27,6 +28,7 @@ a {
 h2,
 h3 {
   margin-top: 0;
+  padding-left: 5px;
 }
 
 a {
@@ -45,17 +47,26 @@ img {
 
 .name {
   font-size: 1.25em;
+  text-align: center;
 }
 
-.name a,
-.main-nav a {
+.main-header {
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,.4);
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding-top: 1px;
+  padding-bottom: 5px;
+}
+
+.main-nav {
   text-align: center;
 }
 
 .main-nav a {
   font-size: .95em;
   color: #093a58;
-  text-transform: uppercase;
 }
 
 .main-nav a:hover {
@@ -67,16 +78,18 @@ img {
 .banner {
   color: #fff;
   background: #134C5D;
-  position: relative;
   width: 100%;
   height: 100%;
+  margin-top: 5px;
   margin-bottom: 20px;
+  padding-bottom: 5px;
 }
 
 .main-footer {
   background: #d9e4ea;
   padding: 2em 0;
   margin-top: 30px;
+  text-align: center;
 }
 
 /* ---- Page Elements ---- */
@@ -88,10 +101,12 @@ img {
 
 .headline {
   color: #FFFFFF;
+  padding-left: 5px;
 }
 
 .tagline {
   color: #C8DFB2;
+  padding-left: 5px;
 }
 
 .feat-img {
@@ -106,33 +121,59 @@ img {
 
 @media (min-width: 780px) {
 
-  /* ---- Float clearfix @ 780px---- */
+  /* ---- @ 780px---- */
+
+  .main-header,
+  .main-nav,
+  .container {
+    display: flex;
+  }
+
+  .main-header {
+    justify-content: space-between;
+  }
 
   .main-nav {
-    float: right;
-    margin-right: 25px;
+    padding-right: 20px;
   }
 
   .main-nav li {
-    float: left;
     margin-left: 15px;
     margin-top: 15px;
   }
 
-  .main-nav a {
-    padding: 10px 10px;
+  .banner {
+    margin-top: 60px;
   }
+
+  .col {
+    flex: 1 50%;
+  }
+
+  .container {
+    flex-wrap: wrap;
+  }
+
+/*
+  Fixed main header navigation, add box shadow, adjust width,
+  set z-index to 1000 so it'll stack above all other potential
+  fixed elements
+ */
+  .main-header {
+    position: fixed;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0,0,0,.4);
+    top: 0;
+    width: 98.8%;
+    z-index: 1000;
+  }
+
 
   .name {
     float: left;
     margin-left: 15px;
   }
 
-  .clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
 
   .logo {
     display: block;
@@ -155,15 +196,6 @@ img {
     padding-bottom: 10px;
   }
 
-  .col {
-    display: inline-block;
-    width: 33%;
-    vertical-align: top;
-    margin-right: -5px;
-    padding-right: 1em;
-    padding-left: 1em;
-  }
-
 /*--Center main content section --*/
   .container {
     width: 90%;
@@ -172,6 +204,26 @@ img {
 
   .main-footer {
     text-align: center;
+  }
+
+}
+
+@media (min-width: 1025px) {
+
+  .main-header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+
+  .col {
+    flex-basis: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .primary {
+    flex-grow: 1.4;
   }
 
 }
